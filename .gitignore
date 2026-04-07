@@ -1,1 +1,7 @@
 datasets/archive/
+datasets/merged_crime_nbh_2024.gpkg
+datasets/wijkenbuurten_2024.gpkg
+datasets/model_ready_crime_nbh_2024.gpkg
+Papers/
+.venv/
+GIT_WORKFLOW.md

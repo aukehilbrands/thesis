@@ -1,0 +1,13 @@
+# Data analysis (notebooks 1–4, EDA)
+numpy>=1.26,<3
+pandas>=2.0,<3
+matplotlib>=3.7
+seaborn>=0.13
+geopandas>=0.14
+
+# Excel (.xlsx) — used by pandas.read_excel
+openpyxl>=3.1
+
+# Jupyter
+jupyter>=1.0
+ipykernel>=6.0
