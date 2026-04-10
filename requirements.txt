@@ -5,6 +5,10 @@ matplotlib>=3.7
 seaborn>=0.13
 geopandas>=0.14
 
+# Modeling (notebook 5)
+scikit-learn>=1.4
+xgboost>=2.0
+
 # Excel (.xlsx) — used by pandas.read_excel
 openpyxl>=3.1
 

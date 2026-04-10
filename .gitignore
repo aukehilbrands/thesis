@@ -5,3 +5,4 @@ datasets/model_ready_crime_nbh_2024.gpkg
 Papers/
 .venv/
 GIT_WORKFLOW.md
+.DS_Store
