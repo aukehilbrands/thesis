@@ -6,3 +6,4 @@ Papers/
 .venv/
 GIT_WORKFLOW.md
 .DS_Store
+outputs/modeling_mvp/
