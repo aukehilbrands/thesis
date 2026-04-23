@@ -5,5 +5,6 @@ datasets/model_ready_crime_nbh_2024.gpkg
 Papers/
 .venv/
 GIT_WORKFLOW.md
+context_document.md
 .DS_Store
 outputs/modeling_mvp/
