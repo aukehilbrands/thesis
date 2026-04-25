@@ -1,7 +1,5 @@
 datasets/archive/
 datasets/pre-processing/
-datasets/merged_crime_nbh_2024.gpkg
-datasets/raw/
 datasets/model_ready_crime_nbh_2024.gpkg
 datasets/model_ready_spatial.gpkg
 Papers/
