@@ -1,0 +1,29 @@
+name: thesis-spatial-crime
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  # Core analysis
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  # Spatial stack (conda recommended)
+  - geopandas
+  - shapely
+  - pyproj
+  - pyogrio
+  # Modeling
+  - scikit-learn
+  - xgboost
+  - shap
+  # Excel IO
+  - openpyxl
+  # Notebooks
+  - jupyterlab
+  - ipykernel
+  - pip:
+      # Keep pip list minimal; prefer conda-forge for geo stack.
+      - tqdm
