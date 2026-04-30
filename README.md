@@ -53,5 +53,5 @@ Open Jupyter and run the notebooks in order:
 jupyter lab
 ```
 
-If you start from scratch, delete cached outputs under `outputs/modeling_improvement/` before re-running notebook 6 (tuning caches are intentionally written to disk for speed).
+If you start from scratch, delete cached outputs under `outputs/modeling_mvp/` and `outputs/modeling_improvement/` before re-running notebooks 5 and 6 (tuning caches are intentionally written to disk for speed).
 
