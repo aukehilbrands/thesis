@@ -24,34 +24,34 @@ Place the following raw input files under `datasets/raw/`:
 
 If you do not have these files, you cannot run notebooks 1–4 end-to-end.
 
-#### Intermediate artifacts (generated)
+#### Intermediate artifacts
 Written under `datasets/pre-processing/`:
 - `merged_crime_nbh_2024.csv` and `merged_crime_nbh_2024.gpkg`
 - `cleaned_crime_nbh_2024.csv`
 - QA exports (e.g. missingness tables, preprocessing audit summaries)
 
-#### Final modeling datasets (generated)
+#### Final modeling datasets
 Written under `datasets/model_ready/`:
 - **`datasets/model_ready/model_ready_base.csv`**: tabular baseline features
 - **`datasets/model_ready/model_ready_spatial.csv`** (+ `datasets/model_ready/model_ready_spatial.gpkg`): baseline + exogenous Queen-contiguity spillovers
 - **`datasets/model_ready/model_ready_boundary.csv`** (+ `datasets/model_ready/model_ready_boundary.gpkg`): baseline + boundary-length weighted spillovers
 
-#### Train/test splits (generated)
+#### Train/test splits
 Created in notebook 5 using a municipality-grouped 80/20 split (`random_state=42`) and written under `datasets/model_ready/`:
 - `model_ready_base_train.csv` / `model_ready_base_test.csv`
 - `model_ready_spatial_train.csv` / `model_ready_spatial_test.csv`
 - `model_ready_boundary_train.csv` / `model_ready_boundary_test.csv`
 
-#### Modeling outputs (generated)
+#### Modeling outputs
 Written under `outputs/modeling/`:
 - `final_test_set_results.csv`
 - `test_set_predictions_all_models.csv`
 
-#### Ethics / bias outputs (generated)
+#### Ethics / bias outputs
 Written under `outputs/ethics_bias_error_analysis/`:
 - `overall_error_metrics.csv`, `flagged_bias_error_patterns.csv`, subgroup tables, and figures
 
-### Reproducibility & evaluation protocol (academic standard)
+### Reproducibility & evaluation protocol
 - **Target**: `log_crime_count = log1p(crime_count)` (fixed across base/spatial datasets).
 - **Held-out test set**: municipality-grouped split (≈20% of municipalities), `random_state=42`.
 - **Model selection / tuning**: 5-fold **GroupKFold by municipality** on the training split only.
@@ -61,7 +61,7 @@ Written under `outputs/ethics_bias_error_analysis/`:
 ### Environment setup
 This project uses a local virtual environment under `.venv/` (not committed). Two ways to recreate the environment:
 
-#### Option A — Conda (recommended for GeoPandas stacks)
+#### Option A — Conda
 Create the environment from `environment.yml`:
 
 ```bash
@@ -70,7 +70,7 @@ conda activate thesis-spatial-crime
 python -m ipykernel install --user --name thesis-spatial-crime --display-name "thesis-spatial-crime"
 ```
 
-#### Option B — pip (works if system geo deps are available)
+#### Option B — pip
 
 ```bash
 python -m venv .venv

@@ -25,5 +25,4 @@ dependencies:
   - jupyterlab
   - ipykernel
   - pip:
-      # Keep pip list minimal; prefer conda-forge for geo stack.
       - tqdm
