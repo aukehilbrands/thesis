@@ -8,7 +8,7 @@ This repository contains a **notebook-based, end-to-end pipeline** that predicts
 - **`3 - EDA.ipynb`**: exploratory analysis for thesis reporting (distributions, checks, missingness).
 - **`4 - Data Pre-processing.ipynb`**: produces the final modeling datasets:
   - `datasets/model_ready/model_ready_base.csv`
-  - `datasets/model_ready/model_ready_spatial.csv` (+ `datasets/model_ready/model_ready_spatial.gpkg`)
+  - `datasets/model_ready/model_ready_queen.csv` (+ `datasets/model_ready/model_ready_queen.gpkg`)
   - `datasets/model_ready/model_ready_boundary.csv (+ .gpkg)`
 - **`5 - Modeling.ipynb`**: consolidated modeling notebook (MVP CV, tuning, final held-out test set evaluation, SHAP). Creates the municipality-grouped train/test split and runs cross-validation/tuning on the training split only. Using OLS, RF, XGBoost.
 - **`6 - Ethics Bias and Error Analysis.ipynb`**: bias/error stratification using the **held-out test predictions**.
@@ -33,13 +33,13 @@ Written under `datasets/pre-processing/`:
 #### Final modeling datasets
 Written under `datasets/model_ready/`:
 - **`datasets/model_ready/model_ready_base.csv`**: tabular baseline features
-- **`datasets/model_ready/model_ready_spatial.csv`** (+ `datasets/model_ready/model_ready_spatial.gpkg`): baseline + exogenous Queen-contiguity spillovers
+- **`datasets/model_ready/model_ready_queen.csv`** (+ `datasets/model_ready/model_ready_queen.gpkg`): baseline + exogenous Queen-contiguity spillovers
 - **`datasets/model_ready/model_ready_boundary.csv`** (+ `datasets/model_ready/model_ready_boundary.gpkg`): baseline + boundary-length weighted spillovers
 
 #### Train/test splits
 Created in notebook 5 using a municipality-grouped 80/20 split (`random_state=42`) and written under `datasets/model_ready/`:
 - `model_ready_base_train.csv` / `model_ready_base_test.csv`
-- `model_ready_spatial_train.csv` / `model_ready_spatial_test.csv`
+- `model_ready_queen_train.csv` / `model_ready_queen_test.csv`
 - `model_ready_boundary_train.csv` / `model_ready_boundary_test.csv`
 
 #### Modeling outputs
