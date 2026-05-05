@@ -1,7 +1,7 @@
 datasets/archive/
-datasets/pre-processing/
-datasets/model_ready_crime_nbh_2024.gpkg
-datasets/model_ready_queen.gpkg
+datasets/model_ready/model_ready_boundary.gpkg
+datasets/model_ready/model_ready_queen.gpkg
+datasets/raw/wijkenbuurten_2024.gpkg
 Papers/
 .venv/
 GIT_WORKFLOW.md
