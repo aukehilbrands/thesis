@@ -3,15 +3,11 @@
 This repository contains a **notebook-based, end-to-end pipeline** that predicts neighbourhood-level **registered crime rate** in the Netherlands using CBS neighbourhood (*buurt*) covariates, optionally augmented with **exogenous spatial spillover features** (Queen contiguity).
 
 ### Pipeline overview (run order)
-- **`1 - Merging Datasets.ipynb`**: merges raw crime + neighbourhood covariates, constructs join keys, attaches neighbourhood polygons (GeoPackage), exports merged artifacts to `datasets/pre-processing/`.
-- **`2 - Data Cleaning.ipynb`**: coerces types/encodings and drops unused metadata columns, exports `datasets/pre-processing/cleaned_crime_nbh_2024.csv`.
-- **`3 - EDA.ipynb`**: exploratory analysis for thesis reporting (distributions, checks, missingness).
-- **`4 - Data Pre-processing.ipynb`**: produces the final modeling datasets:
-  - `datasets/model_ready/model_ready_base.csv`
-  - `datasets/model_ready/model_ready_queen.csv` (+ `datasets/model_ready/model_ready_queen.gpkg`)
-  - `datasets/model_ready/model_ready_boundary.csv (+ .gpkg)`
-- **`5 - Modeling.ipynb`**: consolidated modeling notebook (MVP CV, tuning, final held-out test set evaluation, SHAP). Creates the municipality-grouped train/test split and runs cross-validation/tuning on the training split only. Using OLS, RF, XGBoost.
-- **`6 - Ethics Bias and Error Analysis.ipynb`**: bias/error stratification using the **held-out test predictions**.
+- **`1_merge_and_clean_data.ipynb`**: merges raw crime + neighbourhood covariates, constructs join keys, attaches neighbourhood polygons (GeoPackage), exports merged artifacts to `datasets/pre-processing/`, and creates a cleaned tabular dataset for downstream steps.
+- **`2_eda_and_preprocessing.ipynb`**: runs **untouched-data EDA** on the cleaned dataset, then creates and exports the **model-ready datasets** (base, queen, boundary) and their reduced-feature sensitivity variants.
+- **`3_modeling_and_analysis.ipynb`**: creates the municipality-grouped train/test split, runs MVP CV + tuning (RF/XGB) on the training split only, evaluates on the held-out test set, runs optional SHAP, and performs ethics/bias/error analysis using the saved test predictions.
+
+The original six notebooks are retained for reference, but the **three notebooks above are the canonical run order**.
 
 ### Data layout (inputs, intermediates, outputs)
 
@@ -22,7 +18,7 @@ Place the following raw input files under `datasets/raw/`:
 - **`datasets/raw/raw_nbh_2024.xlsx`**: CBS neighbourhood covariates. Downloaded from: https://www.cbs.nl/nl-nl/maatwerk/2025/38/kerncijfers-wijken-en-buurten-2024
 - **`datasets/raw/wijkenbuurten_2024.gpkg`**: CBS official neighbourhood polygons (GeoPackage). Downloaded from: https://service.pdok.nl/cbs/wijkenbuurten/2024/atom/wijk_en_buurtkaart_2024.xml
 
-If you do not have these files, you cannot run notebooks 1–4 end-to-end.
+If you do not have these files, you cannot run the pipeline end-to-end.
 
 #### Intermediate artifacts
 Written under `datasets/pre-processing/`:
@@ -37,7 +33,7 @@ Written under `datasets/model_ready/`:
 - **`datasets/model_ready/model_ready_boundary.csv`** (+ `datasets/model_ready/model_ready_boundary.gpkg`): baseline + boundary-length weighted spillovers
 
 #### Train/test splits
-Created in notebook 5 using a municipality-grouped 80/20 split (`random_state=42`) and written under `datasets/model_ready/`:
+Created in `3_modeling_and_analysis.ipynb` using a municipality-grouped 80/20 split (`random_state=42`) and written under `datasets/model_ready/`:
 - `model_ready_base_train.csv` / `model_ready_base_test.csv`
 - `model_ready_queen_train.csv` / `model_ready_queen_test.csv`
 - `model_ready_boundary_train.csv` / `model_ready_boundary_test.csv`
@@ -57,6 +53,12 @@ Written under `outputs/ethics_bias_error_analysis/`:
 - **Model selection / tuning**: 5-fold **GroupKFold by municipality** on the training split only.
 - **Leakage safety**: all imputation (median) is done **inside sklearn Pipelines**, fit on training folds only.
 - **Final reporting**: figures/tables/SHAP are generated from **held-out test set predictions** after refitting on the full training split.
+
+### Running the pipeline (recommended)
+Run the notebooks in this order from a clean kernel:
+- `1_merge_and_clean_data.ipynb`
+- `2_eda_and_preprocessing.ipynb`
+- `3_modeling_and_analysis.ipynb`
 
 ### Environment setup
 This project uses a local virtual environment under `.venv/` (not committed). Two ways to recreate the environment:

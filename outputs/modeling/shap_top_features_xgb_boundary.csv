@@ -1,0 +1,16 @@
+feature,mean_abs_shap
+a_bedv,0.30188403
+a_1p_hh,0.28089398
+a_vastg,0.13642861
+ste_oad,0.121045806
+a_neu_al,0.11619111
+a_bed_gi,0.095659055
+g_3km_sc,0.07743041
+a_gbl_ne,0.0708076
+a_lan_ha,0.07068434
+a_bed_ru,0.06310957
+a_opp_ha,0.044658232
+boundary_lag_a_opp_ha,0.040901713
+pst_mvp,0.03605963
+bev_dich,0.033164617
+g_ele_tr,0.0325821

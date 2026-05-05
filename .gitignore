@@ -1,3 +1,4 @@
+archive/
 datasets/archive/
 datasets/model_ready/
 datasets/pre-processing/
@@ -9,4 +10,4 @@ outputs/modeling_mvp/
 outputs/modeling_improvement/
 Example Thesis code.ipynb
 .DS_Store
-**/.DS_Store
+**/.DS_Storedatasets/raw/*.gpkg

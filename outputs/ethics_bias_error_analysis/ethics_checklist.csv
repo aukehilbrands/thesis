@@ -1,18 +1,9 @@
-Area,Question,Relevance to this thesis,Current answer / action,Remaining risk
-Data collection,Could registered crime data reflect reporting or enforcement bias?,High,Discuss as a limitation; interpret predictions as registered crime intensity (not true crime).,High: measurement bias can propagate into models and subgroup error patterns.
-Data collection,Is individual-level personal information used?,Low,No individual PII; unit is neighborhood.,Low.
-Data collection,Are geographic units sufficiently anonymized?,Medium,Neighborhood-level units; still risk of stigmatization via area labeling.,Medium.
-Data processing,Were zero-population neighborhoods handled transparently?,Medium,Rows excluded from modeling datasets; documented in preprocessing.,Low.
-Data processing,Were missing values handled consistently?,High,Median imputation inside CV pipelines (MVP); report as methodological choice.,Medium: imputation can affect subgroup error.
-Data processing,Were spatial spillover features created without target leakage?,High,Only exogenous predictors were lagged; target-lag columns excluded.,Low–Medium: depends on correctness of exclusion rules.
-Analysis,Were subgroup errors analyzed?,High,This notebook performs subgroup stratification and flags systematic patterns.,Medium: subgroup definitions are proxies and may be noisy.
-Analysis,Are visualizations honest and not overstating model precision?,High,"Use OOF plots, fold stability, and error stratification; avoid causal claims.",Medium.
-Analysis,Is the full pipeline reproducible?,High,Notebook-based pipeline with saved outputs and fixed paths.,"Low–Medium (environment differences, e.g., xgboost runtime)."
-Modeling,Could variables act as proxies for socioeconomic disadvantage or protected characteristics?,High,Treat as proxy-risk; analyze differential errors; communicate limitations.,High.
-Modeling,Does performance differ across neighborhood groups?,High,Quantile-based subgroup performance tables + municipality summaries.,Medium.
-Modeling,Were multiple metrics used rather than one single score?,High,"RMSE, MAE, R² + residual summaries.",Low.
-Modeling,Can model predictions be explained at a high level?,Medium,Use error stratification + feature importance from previous notebooks.,Medium.
-Deployment / real-world use,Should the model be used for policing deployment?,High,No: academic analysis only; caution against operational use without safeguards.,High if misused.
-Deployment / real-world use,What safeguards would be needed before real-world use?,High,"Transparency, audits, human oversight, bias monitoring, clear scope limits.",High.
-Deployment / real-world use,How should limitations be communicated?,High,Registered-crime measurement bias; predictive not causal; subgroup instability.,Medium.
-Deployment / real-world use,What unintended uses should be avoided?,High,"Stigmatization, punitive resource allocation, automated decision-making.",High.
+item,status,evidence
+target leakage excluded from predictors,yes,Predictor selection excludes target/log target and crime-like columns; leakage regex excludes crime-lag patterns.
+grouped municipality split used,yes,Held-out split is by gm_naam (municipalities).
+imputation done inside sklearn pipeline,yes,Pipelines include SimpleImputer; preprocessing notebook preserves NaNs.
+held-out test set used for final reporting,yes,Final metrics and figures computed on *_test split only.
+all neighbourhoods retained including a_inw = 0,yes,Preprocessing keeps all neighbourhoods; no filter on a_inw.
+subgroup error analysis performed,yes,Target-decile and population-decile subgroup tables written.
+municipality-level error analysis performed if gm_naam available,yes,municipality_error_summary.csv written
+spatial lag features use only exogenous predictors (no target-derived crime lags),yes,Spillover inputs are exogenous predictors only; contemporaneous target-lag-like features are excluded.

@@ -1,3 +1,4 @@
-issue,evidence,interpretation
-High-crime underprediction,mean residual in top target decile = 0.2882 (>0),Model tends to underpredict high-intensity neighborhoods (systematic error pattern).
-Low-population instability,low-pop MAE = 0.6830 vs overall MAE = 0.4047,Model errors are substantially larger in small-population neighborhoods.
+subgroup_type,subgroup_value,n,rmse,overall_rmse,flag_reason
+target_decile,0,293,0.8122942268882063,0.5560011636615803,RMSE > 1.25 * overall RMSE
+population_decile,0,281,0.8888886773260641,0.5560011636615803,RMSE > 1.25 * overall RMSE
+population_decile,1,286,0.7241694843988602,0.5560011636615803,RMSE > 1.25 * overall RMSE
