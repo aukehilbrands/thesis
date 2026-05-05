@@ -1,12 +1,12 @@
 datasets/archive/
-datasets/model_ready/model_ready_boundary.gpkg
-datasets/model_ready/model_ready_queen.gpkg
-datasets/raw/wijkenbuurten_2024.gpkg
+datasets/model_ready/
+datasets/pre-processing/
 Papers/
 .venv/
 GIT_WORKFLOW.md
 context_document.md
-.DS_Store
 outputs/modeling_mvp/
 outputs/modeling_improvement/
 Example Thesis code.ipynb
+.DS_Store
+**/.DS_Store
