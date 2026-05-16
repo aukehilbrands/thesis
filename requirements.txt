@@ -1,26 +1,32 @@
-# Data analysis (notebooks 1–4, EDA)
+# Canonical pipeline: 1_merge_and_clean_data → 2_eda_and_preprocessing → 3_modeling_and_analysis
+# Python 3.12 recommended (see environment.yml for conda setup).
+
+# Core analysis & visualization
 numpy>=1.26,<3
 pandas>=2.0,<3
 scipy>=1.10
 matplotlib>=3.7
 seaborn>=0.13
+
+# Spatial stack (merge/clean, EDA maps, optional choropleths in notebook 3)
 geopandas>=0.14
 pyogrio>=0.7
 pyproj>=3.6
 shapely>=2.0
 
-# Modeling (notebook 5)
+# Modeling (notebook 3: OLS / RF / XGB, grouped CV stats, SHAP)
 scikit-learn>=1.4
 xgboost>=2.0
 shap>=0.44
 joblib>=1.3
 
-# Excel (.xlsx) — used by pandas.read_excel
+# Excel (.xlsx) — pandas.read_excel in notebook 1
 openpyxl>=3.1
 
-# Jupyter
+# Notebooks
 jupyter>=1.0
+jupyterlab>=4.0
 ipykernel>=6.0
 
-# Utilities (used in scripts / notebooks)
+# Utilities
 tqdm>=4.66
