@@ -1,0 +1,139 @@
+﻿Variabelenaam,Missing percentage
+regio: Regioaanduiding,0.00%
+gm_naam: Gemeentenaam,0.00%
+recs: Soort regio ,0.00%
+gwb_code: Codering ,0.00%
+ind_wbi: Indelingswijziging wijken en buurten ,0.00%
+Bevolking,0.27%
+a_inw: Aantal inwoners ,0.00%
+a_man: Mannen ,0.00%
+a_vrouw: Vrouwen ,0.00%
+a_00_14: 0 tot 15 jaar ,0.00%
+a_15_24: 15 tot 25 jaar ,0.00%
+a_25_44: 25 tot 45 jaar ,0.00%
+a_45_64: 45 tot 65 jaar ,0.00%
+a_65_oo: 65 jaar of ouder ,0.00%
+a_ongeh: Ongehuwd ,0.00%
+a_gehuwd: Gehuwd ,0.00%
+a_gesch: Gescheiden ,0.00%
+a_verwed: Verweduwd ,0.00%
+a_nl_all: Nederland ,0.00%
+a_eur_al: Europa (exclusief Nederland) ,0.00%
+a_neu_al: Buiten Europa ,0.00%
+a_geb_nl: Nederland ,0.00%
+a_geb_eu: Europa (exclusief Nederland) ,0.00%
+a_geb_ne: Buiten Europa ,0.00%
+a_gebl_eu: Europa (exclusief Nederland) ,0.00%
+a_gebl_ne: Buiten Europa ,0.00%
+a_geb: Geboorte totaal ,0.00%
+p_geb: Geboorte relatief ,0.02%
+a_ste: Sterfte totaal ,0.00%
+p_ste: Sterfte relatief ,0.07%
+a_hh: Huishoudens totaal ,0.00%
+a_1p_hh: Eenpersoonshuishoudens ,0.00%
+a_hh_z_k: Huishoudens zonder kinderen ,0.00%
+a_hh_m_k: Huishoudens met kinderen ,0.00%
+g_hhgro: Gemiddelde huishoudensgrootte ,2.78%
+bev_dich: Bevolkingsdichtheid ,5.12%
+Wonen en vastgoed,8.95%
+a_woning: Woningvoorraad,0.00%
+a_nb_won: Nieuwbouw woningen ,0.00%
+a_vastg: Niet-woningvoorraad ,0.00%
+a_nb_vastg: Nieuwbouw niet-woningen ,0.00%
+g_wozbag: Gemiddelde WOZ-waarde van woningen ,12.49%
+p_1gezw: Percentage eengezinswoning ,11.43%
+p_1gezw_tw: Percentage tussenwoning (eengezins) ,11.43%
+p_1gezw_hw: Percentage hoekwoning (eengezins) ,11.43%
+p_1gezw_2w: Percentage twee-onder-één-kap-woning (eengezins) ,11.43%
+p_1gezw_vw: Percentage vrijstaande woning (eengezins) ,11.43%
+p_mgezw: Percentage meergezinswoning ,11.43%
+p_leegsw: Percentage onbewoond ,11.43%
+p_koopw: Koopwoningen ,11.43%
+p_huurw: Huurwoningen totaal ,11.43%
+p_wcorpw: In bezit woningcorporatie ,11.43%
+p_ov_hw: In bezit overige verhuurders ,11.43%
+p_bj_me10: Bouwjaar meer dan tien jaar geleden ,11.43%
+p_bj_mi10: Bouwjaar afgelopen tien jaar ,11.43%
+Energie,37.01%
+g_ele: Gemiddelde elektriciteitslevering ,6.69%
+g_ele_tr: Gemiddelde elektriciteitsteruglevering ,6.69%
+g_gas: Gemiddeld aardgasverbruik ,7.01%
+p_stadsv: Percentage woningen met stadsverwarming ,92.50%
+p_won_z_ag: Percentage aardgasvrije woningen ,30.04%
+p_won_m_ag: Percentage aardgaswoningen ,30.04%
+p_won_zs: Percentage woningen met zonnestroom,30.04%
+p_won_ev: Percentage woningen hoofdz. elektr. Verwarmd,30.04%
+a_lp_pub: Aantal publieke laadpalen,100.00%
+Onderwijs,37.50%
+a_ons_po: Leerlingen po ,0.00%
+a_ons_vovavo: Leerlingen vo (incl. vavo) ,0.00%
+a_ons_mbo: Studenten mbo (excl. extranei) ,0.00%
+a_ons_hbo: Studenten hbo,0.00%
+a_ons_wo: Studenten wo ,0.00%
+"a_opl_bvm: Basisonderwijs, vmbo, mbo1",100.00%
+"a_opl_hvm: Havo, vwo, mbo2-4",100.00%
+"a_opl_hw: Hbo, wo",100.00%
+Arbeid,100.00%
+a_arb_wz: Werkzame beroepsbevolking,100.00%
+p_arb_pp: Netto arbeidsparticipatie,100.00%
+p_arb_wn: Percentage werknemers,100.00%
+p_arb_wnv: Werknemers met vaste arbeidsrelatie,100.00%
+p_arb_wnf: Werknemers met flexibele arbeidsrelatie,100.00%
+p_arb_zs: Percentage zelfstandigen,100.00%
+Inkomen,100.00%
+a_inkont: Aantal inkomensontvangers,100.00%
+g_ink_po: Gemiddeld inkomen per inkomensontvanger,100.00%
+g_ink_pi: Gemiddeld inkomen per inwoner,100.00%
+p_ink_li: 40% personen met laagste inkomen,100.00%
+p_ink_hi: 20% personen met hoogste inkomen,100.00%
+g_hh_sti: Gem. gestandaardiseerd inkomen van huish,100.00%
+p_hh_li: 40% huishoudens met laagste inkomen,100.00%
+p_hh_hi: 20% huishoudens met hoogste inkomen,100.00%
+p_hh_lkk: Huishoudens met een laag inkomen,100.00%
+p_hh_osm: Huish. onder of rond sociaal minimum,100.00%
+p_hh_110: Huishoudens tot 110% van sociaal minimum,100.00%
+p_hh_120: Huishoudens tot 120% van sociaal minimum,100.00%
+m_hh_ver: Mediaan vermogen van particuliere huish.,100.00%
+Sociale zekerheid,10.56%
+a_soz_wb: Personen per soort uitkering; Bijstand ,10.56%
+a_soz_ao: Personen per soort uitkering; AO ,10.56%
+a_soz_ww: Personen per soort uitkering; WW ,10.56%
+a_soz_ow: Personen per soort uitkering; AOW ,10.56%
+Zorg,100.00%
+a_jz_tn: Aantal jongeren met jeugdzorg in natura,100.00%
+p_jz_tn: Percentage jongeren met jeugdzorg in natura,100.00%
+a_wmo_t: Aantal Wmo-cliënten,100.00%
+p_wmo_t: Aantal Wmo-cliënten per 1000 inwoners,100.00%
+"Bedrijfsvestigingen, SBI 2008",11.20%
+a_bedv: Bedrijfsvestigingen totaal ,0.00%
+"a_bed_a: A Landbouw, bosbouw en visserij ",12.60%
+a_bed_bf: B-F Nijverheid en energie ,12.60%
+a_bed_gi: G+I Handel en horeca ,12.60%
+"a_bed_hj: H+J Vervoer, informatie en communicatie ",12.60%
+"a_bed_kl: K-L Financiële diensten, onroerend goed ",12.60%
+a_bed_mn: M-N Zakelijke dienstverlening ,12.60%
+"a_bed_oq: O-Q Overheid, onderwijs en zorg ",12.60%
+"a_bed_ru: R-U Cultuur, recreatie, overige diensten ",12.60%
+Motorvoertuigen,6.86%
+a_pau: Personenauto's totaal ,0.00%
+a_bst_b: Personenauto's; brandstof benzine ,0.00%
+a_bst_nb: Personenauto's; overige brandstof ,0.00%
+g_pau_hh: Personenauto's per huishouden ,20.57%
+g_pau_km: Personenauto's naar oppervlakte ,20.57%
+a_m2w: Motorfietsen ,0.00%
+Voorzieningen,5.24%
+g_afs_hp: Afstand tot huisartsenpraktijk; afstand ,5.24%
+g_afs_gs: Afstand tot grote supermarkt ,5.24%
+g_afs_kv: Afstand tot kinderdagverblijf ,5.24%
+g_afs_sc: Afstand tot school ,5.24%
+g_3km_sc: Scholen binnen 3 km ,5.24%
+Oppervlakte,0.00%
+a_opp_ha: Oppervlakte totaal ,0.00%
+a_lan_ha: Oppervlakte land ,0.00%
+a_wat_ha: Oppervlakte water ,0.00%
+Postcode,0.68%
+pst_mvp: Meest voorkomende postcode,0.68%
+pst_dekp: Dekkingspercentage,0.68%
+Stedelijkheid,0.60%
+ste_mvs: Mate van stedelijkheid,0.60%
+ste_oad: Omgevingsadressendichtheid,0.60%

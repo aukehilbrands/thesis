@@ -1,0 +1,7 @@
+dataset,model,cv_rmse,model__bootstrap,model__colsample_bytree,model__learning_rate,model__max_depth,model__max_features,model__min_child_weight,model__min_samples_leaf,model__min_samples_split,model__n_estimators,model__reg_alpha,model__reg_lambda,model__subsample
+base,RF,0.595346447180815,True,,,40,0.5,,2.0,2.0,500,,,
+queen,RF,0.5909926826967722,True,,,40,0.5,,2.0,2.0,500,,,
+boundary,RF,0.5973656436267674,True,,,40,0.5,,5.0,2.0,800,,,
+base,XGB,0.5773395902906302,,0.6,0.01,5,,3.0,,,1000,0.1,1.0,0.6
+queen,XGB,0.5707006821999261,,0.6,0.01,5,,3.0,,,1000,0.1,1.0,0.6
+boundary,XGB,0.5761440967956467,,0.8,0.01,8,,5.0,,,800,0.1,2.0,0.6
