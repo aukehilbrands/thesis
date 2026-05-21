@@ -1,9 +1,0 @@
-item,status,evidence
-target leakage excluded from predictors,yes,Predictor selection excludes target/log target and crime-like columns; leakage regex excludes crime-lag patterns.
-grouped municipality split used,yes,Held-out split is by gm_naam (municipalities).
-imputation done inside sklearn pipeline,yes,Pipelines include SimpleImputer; preprocessing notebook preserves NaNs.
-held-out test set used for final reporting,yes,Final metrics and figures computed on *_test split only.
-all neighbourhoods retained including a_inw = 0,yes,Preprocessing keeps all neighbourhoods; no filter on a_inw.
-subgroup error analysis performed,yes,Target-decile and population-decile subgroup tables written.
-municipality-level error analysis performed if gm_naam available,yes,municipality_error_summary.csv written
-spatial lag features use only exogenous predictors (no target-derived crime lags),yes,Spillover inputs are exogenous predictors only; contemporaneous target-lag-like features are excluded.
