@@ -1,4 +1,4 @@
-## Thesis — Crime prediction with spatial spillovers (CBS neighbourhoods)
+## Thesis - Crime prediction with spatial spillovers (CBS neighbourhoods)
 
 This repository contains a notebook-based, end-to-end pipeline that predicts neighbourhood-level registered crime intensity in the Netherlands using CBS neighbourhood (*buurt*) covariates, optionally augmented with exogenous spatial spillover features (Queen contiguity and boundary-length weights).
 
@@ -18,7 +18,7 @@ Place the following files under `datasets/raw/` (large files may be gitignored; 
 - **`datasets/raw/raw_nbh_2024.xlsx`**: CBS neighbourhood covariates. [Kerncijfers wijken en buurten 2024](https://www.cbs.nl/nl-nl/maatwerk/2025/38/kerncijfers-wijken-en-buurten-2024)
 - **`datasets/raw/wijkenbuurten_2024.gpkg`**: CBS neighbourhood polygons (GeoPackage). [Wijk- en Buurtkaart 2024 (PDOK)](https://service.pdok.nl/cbs/wijkenbuurten/2024/atom/wijk_en_buurtkaart_2024.xml)
 
-Without these files, the pipeline cannot be run end-to-end.
+Without these files, the pipeline cannot be run end-to-end. If the datasets are downloaded from their original sources, they will have to be renamed to the exact name listed above. Please be aware that the datasets from the original sources might have changed over time, resulting in different names for columns, or data having been removed/added.
 
 #### Intermediate artifacts (`datasets/pre-processing/` and notebook 2)
 
@@ -56,8 +56,8 @@ Written when the corresponding notebook 3 cells are run:
 
 **Held-out test performance**
 
-- `final_test_set_results.csv` — RMSE / MAE / R² for all model × feature-set × tuning combinations
-- `test_set_predictions_all_models.csv` — row-level test predictions (`gwb_code_10`, residuals, etc.)
+- `final_test_set_results.csv` - RMSE / MAE / R² for all model × feature-set × tuning combinations
+- `test_set_predictions_all_models.csv` - row-level test predictions (`gwb_code_10`, residuals, etc.)
 - `final_test_set_rmse_pivot.csv`
 - `final_test_set_rmse_vs_base.csv`
 - `final_test_set_rmse_mvp_vs_tuned.csv`
@@ -66,8 +66,8 @@ Written when the corresponding notebook 3 cells are run:
 
 **Hyperparameters**
 
-- `hyperparam_table.csv` — search ranges checked (RF & XGB)
-- `final_tuned_hyperparameters.csv` — selected configurations per model × feature set (after tuning cells run)
+- `hyperparam_table.csv` - search ranges checked (RF & XGB)
+- `final_tuned_hyperparameters.csv` - selected configurations per model × feature set (after tuning cells run)
 
 **Grouped CV robustness** (paired municipality folds on the training split; not nested CV)
 
@@ -124,7 +124,7 @@ For notebook 3, run through imports → data load → train/test split → MVP C
 
 Use a local environment (`.venv/` is not committed). **Python 3.12** is recommended.
 
-#### Option A — Conda (recommended for GeoPandas)
+#### Option A - Conda (recommended for GeoPandas)
 
 ```bash
 conda env create -f environment.yml
@@ -132,7 +132,7 @@ conda activate thesis-spatial-crime
 python -m ipykernel install --user --name thesis-spatial-crime --display-name "thesis-spatial-crime"
 ```
 
-#### Option B — pip
+#### Option B - pip
 
 ```bash
 python -m venv .venv
